@@ -5,6 +5,8 @@ the lastest UniVRM, then import this SDK.
 
 As an introduction, please watch [this tutorial video](https://youtu.be/jhQ8DF87I5I) by @[Virtual_Deat](twitter.com/Virtual_Deat).
 
+You can watch how the two included sample models were made [here](https://www.youtube.com/watch?v=T4LxyxfUAVY).
+
 # Usage
 
 First create a VRM as usual, then import it. You can now change
@@ -61,10 +63,11 @@ To have a world space particle system follow along with a bone,
 create an empty game object inside the bone, put a
 VSF_IKFollower component on the particle system it inside. To
 enable and disable the particle system, enable or disable this
-container object. It is probably also a good idea to use empty
+container object. You should also make sure to use empty
 game objects with the VSF_IKFollower component on them for
-constraints and other things that rely on IK influenced bone
-positions.
+constraint sources and other things that rely on IK influenced
+bone positions, as they may not move along the character's
+movement otherwise.
 
 The standard Particles/Standard Unlit shader can cause issues
 with transparency, so it is recommended to use the included
