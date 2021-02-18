@@ -33,6 +33,16 @@ corresponding checkbox underneath the animation entry. This will
 prevent the head and hands from following the tracking, allowing
 all bones of the avatar to be controlled by the animation.
 
+Animations are faded in and out according to the expression's
+transition time. Due to this, an animation that just sets the
+color of an object to red and is three frames long without
+looping would still fade the color to red when activated and
+fade it back when deactivated, as the animation's value would
+remain at that of its last frame, while the weight of the
+animation changes. If the fading should be controlled by the
+animation, it is recommended to set the transition time to 0
+instead.
+
 It is possible to add custom main cameras to an avatar as long
 as they are disabled by default and only enabled through
 animations or similar mechanisms. In this case, a VSF_MainCamera
