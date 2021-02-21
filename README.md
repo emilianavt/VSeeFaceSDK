@@ -1,7 +1,8 @@
 # VSeeFace SDK
 
 You need Unity 2019.4.16f1. Make a project and import
-the lastest UniVRM, then import this SDK.
+the lastest UniVRM, then import this SDK. Also make sure to
+set the project to [linear color space](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html).
 
 As an introduction, please watch [this tutorial video](https://youtu.be/jhQ8DF87I5I) by @[Virtual_Deat](twitter.com/Virtual_Deat).
 
@@ -69,15 +70,9 @@ model's root object.
 Objects with the VSF_Static component should not be placed
 within the armature.
 
-To have a world space particle system follow along with a bone,
-create an empty game object inside the bone, put a
-VSF_IKFollower component on the particle system it inside. To
-enable and disable the particle system, enable or disable this
-container object. You should also make sure to use empty
-game objects with the VSF_IKFollower component on them for
-constraint sources and other things that rely on IK influenced
-bone positions, as they may not move along the character's
-movement otherwise.
+Starting with VSeeFace v1.13.36b, the VSF_IKFollower
+component should no longer be necessary for the correct operation
+of constraints and particle systems.
 
 The standard Particles/Standard Unlit shader can cause issues
 with transparency, so it is recommended to use the included
