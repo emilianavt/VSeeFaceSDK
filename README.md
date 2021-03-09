@@ -97,7 +97,7 @@ the file.
 Supported additional assets are:
 - Dynamic Bones
 - SPCRJointDynamics
-- Magica Cloth
+- Magica Cloth (v1.9.3)
 - uWindowCapture
 - Any regular shaders (not URP, HDRP, LWRP)
 - Most things that seemed safe and useful from Unity itself
