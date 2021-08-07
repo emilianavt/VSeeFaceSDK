@@ -1,6 +1,6 @@
 # VSeeFace SDK
 
-You need Unity 2019.4.16f1. Make a project and import
+You need Unity 2019.4.29f1. Make a project and import
 the lastest UniVRM, then import this SDK. Also make sure to
 set the project to [linear color space](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html).
 
@@ -97,8 +97,9 @@ the file.
 Supported additional assets are:
 - Dynamic Bones
 - SPCRJointDynamics
-- Magica Cloth (v1.9.3)
-- uWindowCapture
+- Magica Cloth (v1.10.2)
+- uWindowCapture (v0.6.0)
+- Obi Cloth (6.2)
 - Any regular shaders (not URP, HDRP, LWRP)
 - Most things that seemed safe and useful from Unity itself
 
@@ -118,7 +119,7 @@ to your avatar, there's already one set up in VSeeFace.
 
 * `DDPPenController`
 * `DDPStampController`
-* `DokoDemoPainterPaintable` (No persistence, texture loading or saving is supported)
+* `DokoDemoPainterPaintable` (No persistence or texture loading or saving is supported)
 * `DokoDemoPainterPen`
 * `DokoDemoPainterStamp`
 * `DynamicBone`
@@ -135,6 +136,37 @@ to your avatar, there's already one set up in VSeeFace.
 * `MagicaCloth.MagicaRenderDeformer`
 * `MagicaCloth.MagicaSphereCollider`
 * `MagicaCloth.MagicaVirtualDeformer`
+* `Obi.ObiAmbientForceZone`
+* `Obi.ObiCharacter`
+* `Obi.ObiCloth`
+* `Obi.ObiClothProxy`
+* `Obi.ObiClothRenderer`
+* `Obi.ObiCollider`
+* `Obi.ObiCollider2D`
+* `Obi.ObiContactEventDispatcher`
+* `Obi.ObiDistanceFieldRenderer`
+* `Obi.ObiFixedUpdater`
+* `Obi.ObiInstancedParticleRenderer`
+* `Obi.ObiLateFixedUpdater`
+* `Obi.ObiLateUpdater`
+* `Obi.ObiParticleAttachment`
+* `Obi.ObiParticleDragger`
+* `Obi.ObiParticleGridDebugger`
+* `Obi.ObiParticlePicker`
+* `Obi.ObiParticleRenderer`
+* `Obi.ObiProfiler`
+* `Obi.ObiRigidbody`
+* `Obi.ObiRigidbody2D`
+* `Obi.ObiSkinnedCloth`
+* `Obi.ObiSkinnedClothRenderer`
+* `Obi.ObiSolver`
+* `Obi.ObiSphericalForceZone`
+* `Obi.ObiStitcher`
+* `Obi.ObiTearableCloth`
+* `Obi.ObiTearableClothRenderer`
+* `ObiActorTeleport`
+* `ObiContactGrabber`
+* `ObiParticleCounter`
 * `RootMotion.FinalIK.RotationLimitAngle`
 * `RootMotion.FinalIK.RotationLimitHinge`
 * `RootMotion.FinalIK.RotationLimitPolygonal`
@@ -159,14 +191,19 @@ to your avatar, there's already one set up in VSeeFace.
 * `UnityEngine.AudioSource`
 * `UnityEngine.BillboardRenderer`
 * `UnityEngine.BoxCollider`
+* `UnityEngine.BoxCollider2D`
 * `UnityEngine.Camera`
 * `UnityEngine.Canvas`
 * `UnityEngine.CanvasRenderer`
 * `UnityEngine.CapsuleCollider`
+* `UnityEngine.CharacterJoint`
 * `UnityEngine.Cloth`
+* `UnityEngine.ConfigurableJoint`
 * `UnityEngine.EllipsoidParticleEmitter`
+* `UnityEngine.FixedJoint`
 * `UnityEngine.FlareLayer`
 * `UnityEngine.GUILayer`
+* `UnityEngine.HingeJoint`
 * `UnityEngine.Joint`
 * `UnityEngine.Light`
 * `UnityEngine.LineRenderer`
@@ -180,8 +217,10 @@ to your avatar, there's already one set up in VSeeFace.
 * `UnityEngine.ParticleSystemRenderer`
 * `UnityEngine.RectTransform`
 * `UnityEngine.Rigidbody`
+* `UnityEngine.Rigidbody2D`
 * `UnityEngine.SkinnedMeshRenderer`
 * `UnityEngine.SphereCollider`
+* `UnityEngine.SpringJoint`
 * `UnityEngine.SpriteMask`
 * `UnityEngine.SpriteRenderer`
 * `UnityEngine.TextMesh`
