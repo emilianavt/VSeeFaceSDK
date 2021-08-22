@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace VSeeFace {
+    // This component is not necessary anymore and should not be used.
     public class VSF_IKFollower : MonoBehaviour
     {
         private Transform target;
