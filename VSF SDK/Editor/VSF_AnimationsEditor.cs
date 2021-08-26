@@ -18,7 +18,8 @@ public class VSF_AnimationsEditor : Editor
         string[] options = new string[bsavatar.Clips.Count];
         for (int i = 0; i < options.Length; i++)
         {
-            options[i] = bsavatar.Clips[i].Key.ToString();
+            if (bsavatar.Clips[i] != null)
+                options[i] = bsavatar.Clips[i].Key.ToString();
         }
         
 
@@ -40,6 +41,8 @@ public class VSF_AnimationsEditor : Editor
                 }
             }
             nameIndex = EditorGUI.Popup(new Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight), "Blendshape", nameIndex, options);
+            if (nameIndex >= options.Length)
+                nameIndex = 0;
             bsname.stringValue = options[nameIndex];
 
             EditorGUI.PropertyField(new Rect(rect.x, rect.y + EditorGUIUtility.singleLineHeight, rect.width, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("animation"), new GUIContent("Animation"));
@@ -52,7 +55,8 @@ public class VSF_AnimationsEditor : Editor
         EditorGUI.BeginChangeCheck();
         serializedObject.UpdateIfRequiredOrScript();
 
-        animationList.DoLayoutList();
+        if (animationList != null)
+            animationList.DoLayoutList();
 
         serializedObject.ApplyModifiedProperties();
         EditorGUI.EndChangeCheck();
