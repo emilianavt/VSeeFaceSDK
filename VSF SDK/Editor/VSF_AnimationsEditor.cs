@@ -53,6 +53,7 @@ public class VSF_AnimationsEditor : Editor
     public override void OnInspectorGUI()
     {
         EditorGUI.BeginChangeCheck();
+        (target as VSF_Animations).enablePreview = EditorGUILayout.Toggle("Enable preview", (target as VSF_Animations).enablePreview);
         serializedObject.UpdateIfRequiredOrScript();
 
         if (animationList != null)
