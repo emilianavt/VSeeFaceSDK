@@ -13,5 +13,7 @@ namespace VSeeFace {
         public float modelHeight = 0f;
         [Tooltip("The value of this field is used as the offset of the model from the ground if \"Override Model Height\" is enabled.")]
         public float modelGroundOffset = 0f;
+        [Tooltip("When this option is enabled, the default reflection probe in VSeeFace, which takes its color from the ambient lighting, will be disabled.")]
+        public bool disableDefaultReflectionProbe = false;
     }
 }

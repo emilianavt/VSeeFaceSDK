@@ -210,6 +210,8 @@ to your avatar, there's already one set up in VSeeFace.
 * `UnityEngine.HingeJoint2D`
 * `UnityEngine.Joint`
 * `UnityEngine.Light`
+* `UnityEngine.LightProbeGroup`
+* `UnityEngine.LightProbeProxyVolume`
 * `UnityEngine.LineRenderer`
 * `UnityEngine.MeshCollider`
 * `UnityEngine.MeshFilter`
@@ -220,6 +222,7 @@ to your avatar, there's already one set up in VSeeFace.
 * `UnityEngine.ParticleSystemForceField`
 * `UnityEngine.ParticleSystemRenderer`
 * `UnityEngine.RectTransform`
+* `UnityEngine.ReflectionProbe`
 * `UnityEngine.RelativeJoint2D`
 * `UnityEngine.Rigidbody`
 * `UnityEngine.Rigidbody2D`
@@ -271,6 +274,7 @@ to your avatar, there's already one set up in VSeeFace.
 * `VSeeFace.VSF_SetEffectBloom`
 * `VSeeFace.VSF_SetEffectChromaticAberration`
 * `VSeeFace.VSF_SetEffectColorGrading`
+* `VSeeFace.VSF_SetEffectDepthOfField`
 * `VSeeFace.VSF_SetEffectGrain`
 * `VSeeFace.VSF_SetEffectHalftone`
 * `VSeeFace.VSF_SetEffectLensDistortion`

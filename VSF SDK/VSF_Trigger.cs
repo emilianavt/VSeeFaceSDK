@@ -42,6 +42,11 @@ namespace VSeeFace {
         public bool onTriggerExit = false;
         [Tooltip("Tick this to trigger the actions below when a continuing trigger collision is detected.")]
         public bool onTriggerStay = false;
+        
+        [Tooltip("When ticked, collisions and triggers will only trigger the actions below when the name of the object causing it matches the name below.")]
+        public bool nameCheck = false;
+        [Tooltip("The name of the object has to match this string exactly, including capitalization.")]
+        public string nameCheckName = "";
 
         // The API does not exist yet.
         /*[Header("API events")]
@@ -91,33 +96,49 @@ namespace VSeeFace {
             firstFrame = false;
         }
         
-        void OnCollisionEnter(Collision collision) {
-            if (onCollisionEnter)
+        bool CheckName(Collision collision) {
+            if (!nameCheck)
+                return true;
+            if (collision.gameObject.name == nameCheckName)
+                return true;
+            return false;
+        }
+        
+        bool CheckName(Collider collision) {
+            if (!nameCheck)
+                return true;
+            if (collision.gameObject.name == nameCheckName)
+                return true;
+            return false;
+        }
+        
+        void OnCollisionEnter(Collision collisionInfo) {
+            if (onCollisionEnter && CheckName(collisionInfo))
                 Trigger();
         }
         
         void OnCollisionExit(Collision collisionInfo) {
-            if (onCollisionExit)
+            if (onCollisionExit && CheckName(collisionInfo))
                 Trigger();
         }
         
         void OnCollisionStay(Collision collisionInfo) {
-            if (onCollisionStay)
+            if (onCollisionStay && CheckName(collisionInfo))
                 Trigger();
         }
         
         void OnTriggerEnter(Collider other) {
-            if (onTriggerEnter)
+            if (onTriggerEnter && CheckName(other))
                 Trigger();
         }
         
         void OnTriggerExit(Collider other) {
-            if (onTriggerExit)
+            if (onTriggerExit && CheckName(other))
                 Trigger();
         }
         
         void OnTriggerStay(Collider other) {
-            if (onTriggerStay)
+            if (onTriggerStay && CheckName(other))
                 Trigger();
         }
     }
