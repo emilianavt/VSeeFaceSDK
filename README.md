@@ -1,6 +1,6 @@
 # VSeeFace SDK
 
-You need Unity 2019.4.29f1. Make a project and import
+You need Unity 2019.4.31f1. Make a project and import
 the UniVRM (0.66 is known to work well, older versions may cause issues with MToon transparency), then import this SDK. Also make sure to
 set the project to [linear color space](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html).
 
@@ -97,7 +97,7 @@ the file.
 Supported additional assets are:
 - Dynamic Bones
 - SPCRJointDynamics
-- Magica Cloth (v1.10.2)
+- Magica Cloth (v1.11.1)
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
 - Any regular shaders (not URP, HDRP, LWRP)
