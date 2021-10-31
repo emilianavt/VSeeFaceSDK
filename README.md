@@ -100,6 +100,7 @@ Supported additional assets are:
 - Magica Cloth (v1.11.1)
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
+- DokoDemoPainter (needs to be moved outside the "Plugins" folder, no persistence supported)
 - Any regular shaders (not URP, HDRP, LWRP)
 - Most things that seemed safe and useful from Unity itself
 
