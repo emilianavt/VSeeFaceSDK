@@ -22,7 +22,7 @@ namespace VSeeFace {
             if (!VSeeFace.AvatarCheck.CheckAvatar(prefab, out error)) {
                 assetBundle.Unload(true);
                 assetBundle = null;
-                throw new InvalidDataException(error);
+                throw new System.IO.InvalidDataException(error);
             }
             avatar = Instantiate(prefab);
 
