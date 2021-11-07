@@ -132,7 +132,7 @@ namespace VSeeFace {
         }
         
         void OnParticleCollision(GameObject other) {
-            if (!nameCheck || other.name == nameCheckName)
+            if (onParticleCollision && (!nameCheck || other.name == nameCheckName))
                 Trigger();
         }
         
@@ -152,7 +152,8 @@ namespace VSeeFace {
         }
 
         void OnParticleTrigger() {
-            Trigger();
+            if (onParticleTrigger)
+                Trigger();
         }
     }
 }
