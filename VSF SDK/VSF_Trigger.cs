@@ -35,6 +35,8 @@ namespace VSeeFace {
         public bool onCollisionExit = false;
         [Tooltip("Tick this to trigger the actions below when a continuing collision is detected.")]
         public bool onCollisionStay = false;
+        [Tooltip("Tick this to trigger the actions below when a particle collision is detected.")]
+        public bool onParticleCollision = false;
 
         [Tooltip("Tick this to trigger the actions below when the start of a trigger collision is detected.")]
         public bool onTriggerEnter = false;
@@ -42,6 +44,8 @@ namespace VSeeFace {
         public bool onTriggerExit = false;
         [Tooltip("Tick this to trigger the actions below when a continuing trigger collision is detected.")]
         public bool onTriggerStay = false;
+        [Tooltip("Tick this to trigger the actions below when a particle trigger collision is detected. (Name check not supported.)")]
+        public bool onParticleTrigger = false;
         
         [Tooltip("When ticked, collisions and triggers will only trigger the actions below when the name of the object causing it matches the name below.")]
         public bool nameCheck = false;
@@ -127,6 +131,11 @@ namespace VSeeFace {
                 Trigger();
         }
         
+        void OnParticleCollision(GameObject other) {
+            if (!nameCheck || other.name == nameCheckName)
+                Trigger();
+        }
+        
         void OnTriggerEnter(Collider other) {
             if (onTriggerEnter && CheckName(other))
                 Trigger();
@@ -140,6 +149,10 @@ namespace VSeeFace {
         void OnTriggerStay(Collider other) {
             if (onTriggerStay && CheckName(other))
                 Trigger();
+        }
+
+        void OnParticleTrigger() {
+            Trigger();
         }
     }
 }
