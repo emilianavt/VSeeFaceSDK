@@ -167,6 +167,7 @@ namespace VSeeFace {
             "VSeeFace.VSF_SetEffectGrain",
             "VSeeFace.VSF_SetEffectHalftone",
             "VSeeFace.VSF_SetEffectLensDistortion",
+            "VSeeFace.VSF_SetShaderParamFromTransform",
             "VSeeFace.VSF_SetTransform",
             "VSeeFace.VSF_Static",
             "VSeeFace.VSF_Toggle",
