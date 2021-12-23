@@ -66,6 +66,7 @@ namespace VSeeFace {
             "SPCRJointDynamicsPoint",
             "SPCRJointDynamicsPointGrabber",
             "Spout.SpoutReceiver",
+            "Spout.SpoutSender",
             "TMPro.TMP_Dropdown",
             "TMPro.TMP_InputField",
             "TMPro.TextMeshPro",

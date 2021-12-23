@@ -101,7 +101,7 @@ Supported additional assets are:
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
 - DokoDemoPainter (needs to be moved outside the "Plugins" folder, no persistence supported)
-- Spout4Unity Receiver (https://github.com/sloopidoopi/Spout4Unity/tree/5cb448f30b807aa08d98269fef04d59547c201bd)
+- Spout4Unity (https://github.com/sloopidoopi/Spout4Unity/tree/5cb448f30b807aa08d98269fef04d59547c201bd)
 - Any regular shaders (not URP, HDRP, LWRP)
 - Most things that seemed safe and useful from Unity itself
 
@@ -116,6 +116,13 @@ prefab by dragging your model from the hierarchy into the files
 part of Unity and when asked, select original prefab. Otherwise
 the cloth may not work correctly. Don't add a MagicaPhysicsManager
 to your avatar, there's already one set up in VSeeFace.
+
+For Spout4Unity's SpoutSender, set the component on a camera with
+a render texture set and set the same render texture on the
+sender. Make sure the texture's color format is set to
+R8G8B8A8_UNORM. The SpoutReceiver will automatically set the
+received texture as the main texture on the first material of a
+renderer that is on the same object.
 
 # Whitelisted components
 
@@ -179,6 +186,7 @@ to your avatar, there's already one set up in VSeeFace.
 * `SPCRJointDynamicsPoint`
 * `SPCRJointDynamicsPointGrabber`
 * `Spout.SpoutReceiver`
+* `Spout.SpoutSender`
 * `TMPro.TMP_Dropdown`
 * `TMPro.TMP_InputField`
 * `TMPro.TextMeshPro`
