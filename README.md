@@ -101,6 +101,7 @@ Supported additional assets are:
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
 - DokoDemoPainter (needs to be moved outside the "Plugins" folder, no persistence supported)
+- Spout4Unity Receiver (https://github.com/sloopidoopi/Spout4Unity/tree/5cb448f30b807aa08d98269fef04d59547c201bd)
 - Any regular shaders (not URP, HDRP, LWRP)
 - Most things that seemed safe and useful from Unity itself
 
@@ -177,6 +178,7 @@ to your avatar, there's already one set up in VSeeFace.
 * `SPCRJointDynamicsController`
 * `SPCRJointDynamicsPoint`
 * `SPCRJointDynamicsPointGrabber`
+* `Spout.SpoutReceiver`
 * `TMPro.TMP_Dropdown`
 * `TMPro.TMP_InputField`
 * `TMPro.TextMeshPro`
