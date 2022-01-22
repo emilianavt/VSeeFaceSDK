@@ -12,7 +12,7 @@ namespace VSeeFace {
         public void Toggle() {
             if (targetObject == null)
                 targetObject = gameObject;
-            targetObject.SetActive(!gameObject.activeSelf);
+            targetObject.SetActive(!targetObject.activeSelf);
         }
     }
 }
