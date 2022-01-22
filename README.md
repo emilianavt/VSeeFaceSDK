@@ -304,7 +304,7 @@ renderer that is on the same object.
 
 ## Integrating VSFAvatar support in other applications
 
-Integrating VSFAvatar support is not really supported and the format might change at any time, but if you'd still like to try supporting it, here are some notes. The first thing you'll want to do is include the VSF SDK in your application, so references to the `VSF_*` components can be resolved. Also make sure to include all the assets listed under "Supported additional assets" in the correct versions to ensure compatibility with existing VSFAvatar files. Verifying the whitelist using the `AvatarCheck` component when loading a model is recommended.
+Integrating VSFAvatar support is not really supported and the format might change at any time, but if you'd still like to try supporting it, here are some notes. The first thing you'll want to do is include the VSF SDK in your application, so references to the `VSF_*` components can be resolved. Also make sure to include all the assets listed under "Supported additional assets" in the correct versions to ensure compatibility with existing VSFAvatar files. Verifying the whitelist using the `AvatarCheck` component when loading a model is recommended. DokoDemoPainter should be modified to remove persistence support to prevent VSFAvatar files from being able to write to arbitrary paths.
 
 VSFAvatar files are Unity asset bundle files. You can take a look at the `BasicExporter` and `VSFAvatarInspector` scripts to see how the bundle is laid out. Using that information you should be able to load the file.
 
