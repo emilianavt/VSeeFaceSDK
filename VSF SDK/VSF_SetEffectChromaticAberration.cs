@@ -10,6 +10,13 @@ namespace VSeeFace {
         public bool enabledChromaticAberration = false;
         [Range(0f,1f)]
         public float chromaticAberrationIntensity = 0.609f;
+        
+        public void SetEnabled(bool v) {
+            enabledChromaticAberration = v;
+        }
+        public void SetAberrationIntensity(float v) {
+            chromaticAberrationIntensity = v;
+        }
 
         private int id = -1;
         private IEffectApplier applier = null;

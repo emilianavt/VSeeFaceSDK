@@ -21,6 +21,31 @@ namespace VSeeFace {
         [Range(0.5f,4f)]
         public float bloomAlpha = 1f;
         
+        public void SetEnabled(bool v) {
+            enabledBloom = v;
+        }
+        public void SetFixAlpha(bool v) {
+            bloomFixAlpha = v;
+        }
+        public void SetIntensity(float v) {
+            bloomIntensity = v;
+        }
+        public void SetThreshold(float v) {
+            bloomThreshold = v;
+        }
+        public void SetDiffusion(float v) {
+            bloomDiffusion = v;
+        }
+        public void SetColor(Color v) {
+            bloomColor = v;
+        }
+        public void SetColorIntensity(float v) {
+            bloomColorIntensity = v;
+        }
+        public void SetAlpha(float v) {
+            bloomAlpha = v;
+        }
+        
         private int id = -1;
         private IEffectApplier applier = null;
         

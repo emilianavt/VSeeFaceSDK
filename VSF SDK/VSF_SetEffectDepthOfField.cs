@@ -21,6 +21,29 @@ namespace VSeeFace {
         public bool dofEnableDynamicFocus = false;
         public Transform dofDynamicTarget;
         
+        public void SetEnabled(bool v) {
+            enabledDepthOfField = v;
+        }
+        public void SetFocusDistance(float v) {
+            dofFocusDistance = v;
+        }
+        public void SetAperture(float v) {
+            dofAperture = v;
+        }
+        public void SetFocalLength(float v) {
+            dofFocalLength = v;
+        }
+        public void SetMaxBlurSize(int v) {
+            dofMaxBlurSize = v;
+        }
+        public void SetEnableDynamicFocus(bool v) {
+            dofEnableDynamicFocus = v;
+        }
+        public void SetDynamicTarget(Transform v) {
+            dofDynamicTarget = v;
+        }
+
+        
         private int id = -1;
         private IEffectApplier applier = null;
         

@@ -15,6 +15,22 @@ namespace VSeeFace {
         [Range(0,4)]
         public int ambientOcclusionQuality = 3;
         public Color ambientOcclusionColor = Color.black;
+        
+        public void SetEnabled(bool v) {
+            enabledAmbientOcclusion = v;
+        }
+        public void SetIntensity(float v) {
+            ambientOcclusionIntensity = v;
+        }
+        public void SetRadius(float v) {
+            ambientOcclusionRadius = v;
+        }
+        public void SetQuality(int v) {
+            ambientOcclusionQuality = v;
+        }
+        public void SetColor(Color v) {
+            ambientOcclusionColor = v;
+        }
 
         private int id = -1;
         private IEffectApplier applier = null;

@@ -21,10 +21,24 @@ namespace VSeeFace {
         public bool autoSetRotation = false;
         [Tooltip("When enabled, the scale is set every frame.")]
         public bool autoSetScale = false;
+        [Tooltip("When enabled, automatic transform updates are performed in LateUpdate.")]
+        public bool updateLate = false;
         [Tooltip("When enabled, coordinates are interpreted as local instead of world coordinates. Setting scale is only supported when this option is enabled.")]
         public bool coordinatesAreLocal = true;
+        
+        [Header("Transform source")]
+        [Tooltip("When set, the position, rotation and scale fields are ignored and the set transform is used as the source for vectors that are applied. The position, rotation and scale fields get updated accordingly.")]
+        public Transform sourceTransform = null;
+        [Tooltip("When enabled, the global position and rotation are used instead of local ones. Scale is always only ever applied and sourced as a local scale.")]
+        public bool sourceGlobalVectors = false;
 
         public void SetPosition() {
+            if (sourceTransform != null) {
+                if (sourceGlobalVectors)
+                    position = sourceTransform.position;
+                else
+                    position = sourceTransform.localPosition;
+            }
             if (coordinatesAreLocal)
                 transform.localPosition = position;
             else
@@ -32,6 +46,12 @@ namespace VSeeFace {
         }
         
         public void SetRotation() {
+            if (sourceTransform != null) {
+                if (sourceGlobalVectors)
+                    rotation = sourceTransform.eulerAngles;
+                else
+                    rotation = sourceTransform.localEulerAngles;
+            }
             if (coordinatesAreLocal)
                 transform.localEulerAngles = rotation;
             else
@@ -39,8 +59,43 @@ namespace VSeeFace {
         }
         
         public void SetScale() {
+            if (sourceTransform != null) {
+                if (!sourceGlobalVectors)
+                    scale = sourceTransform.localScale;
+            }
             if (coordinatesAreLocal)
                 transform.localScale = scale;
+        }
+        
+        public void SetPositionValue(Vector3 v) {
+            this.position = v;
+        }
+        public void SetRotationValue(Vector3 v) {
+            this.rotation = v;
+        }
+        public void SetScaleValue(Vector3 v) {
+            this.scale = v;
+        }
+        public void SetAutoSetPosition(bool v) {
+            autoSetPosition = v;
+        }
+        public void SetAutoSetRotation(bool v) {
+            autoSetRotation = v;
+        }
+        public void SetAutoSetScale(bool v) {
+            autoSetScale = v;
+        }
+        public void SetUpdateLate(bool v) {
+            updateLate = v;
+        }
+        public void SetCoordinatesAreLocal(bool v) {
+            coordinatesAreLocal = v;
+        }
+        public void SetSourceTransform(Transform v) {
+            sourceTransform = v;
+        }
+        public void SetSourceGlobalVectors(bool v) {
+            sourceGlobalVectors = v;
         }
         
         public void SetAll() {
@@ -49,13 +104,23 @@ namespace VSeeFace {
             SetScale();
         }
         
-        void Update() {
+        void RunUpdates() {
             if (autoSetPosition)
                 SetPosition();
             if (autoSetRotation)
                 SetRotation();
             if (autoSetScale)
                 SetScale();
+        }
+        
+        void Update() {
+            if (!updateLate)
+                RunUpdates();
+        }
+        
+        void LateUpdate() {
+            if (updateLate)
+                RunUpdates();
         }
     }
 }

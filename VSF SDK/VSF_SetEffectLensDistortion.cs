@@ -20,6 +20,28 @@ namespace VSeeFace {
         public float lensDistortionCenterY = 0;
         [Range(0.01f,5f)]
         public float lensDistortionScale = 1;
+        
+        public void SetEnabled(bool v) {
+            enabledLensDistortion = v;
+        }
+        public void SetIntensity(float v) {
+            lensDistortionIntensity = v;
+        }
+        public void SetXMultiplier(float v) {
+            lensDistortionXMultiplier = v;
+        }
+        public void SetYMultiplier(float v) {
+            lensDistortionYMultiplier = v;
+        }
+        public void SetCenterX(float v) {
+            lensDistortionCenterX = v;
+        }
+        public void SetCenterY(float v) {
+            lensDistortionCenterY = v;
+        }
+        public void SetScale(float v) {
+            lensDistortionScale = v;
+        }
 
         private int id = -1;
         private IEffectApplier applier = null;

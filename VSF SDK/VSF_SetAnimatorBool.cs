@@ -15,6 +15,13 @@ namespace VSeeFace {
         [Tooltip("This is the value for the parameter that should be set. It can be modified through Unity animations.")]
         public bool parameterValue = false;
         
+        public void SetName(string v) {
+            parameterName = v;
+        }
+        public void SetValue(bool v) {
+            parameterValue = v;
+        }
+        
         public void Update() {
             if (targetAnimator == null)
                 targetAnimator = gameObject.GetComponent<Animator>();

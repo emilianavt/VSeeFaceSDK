@@ -90,6 +90,7 @@ namespace VSeeFace {
             "UnityEngine.CharacterJoint",
             "UnityEngine.Cloth",
             "UnityEngine.ConfigurableJoint",
+            "UnityEngine.ConstantForce",
             "UnityEngine.DistanceJoint2D",
             "UnityEngine.EllipsoidParticleEmitter",
             "UnityEngine.FixedJoint",

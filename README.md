@@ -97,7 +97,7 @@ the file.
 Supported additional assets are:
 - Dynamic Bones
 - SPCRJointDynamics
-- Magica Cloth (v1.11.1)
+- Magica Cloth (v1.12.3)
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
 - DokoDemoPainter (needs to be moved outside the "Plugins" folder, no persistence supported)
@@ -210,6 +210,7 @@ renderer that is on the same object.
 * `UnityEngine.CharacterJoint`
 * `UnityEngine.Cloth`
 * `UnityEngine.ConfigurableJoint`
+* `UnityEngine.ConstantForce`
 * `UnityEngine.DistanceJoint2D`
 * `UnityEngine.EllipsoidParticleEmitter`
 * `UnityEngine.FixedJoint`

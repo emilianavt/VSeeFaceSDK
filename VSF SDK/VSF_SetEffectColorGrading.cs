@@ -20,6 +20,28 @@ namespace VSeeFace {
         public float colorGradingBrightness = 0f;
         [Range(-100f,100f)]
         public float colorGradingContrast = 0f;
+        
+        public void SetEnabled(bool v) {
+            enabledColorGrading = v;
+        }
+        public void SetTemperature(float v) {
+            colorGradingTemperature = v;
+        }
+        public void SetTint(float v) {
+            colorGradingTint = v;
+        }
+        public void SetHue(float v) {
+            colorGradingHue = v;
+        }
+        public void SetSaturation(float v) {
+            colorGradingSaturation = v;
+        }
+        public void SetBrightness(float v) {
+            colorGradingBrightness = v;
+        }
+        public void SetContrast(float v) {
+            colorGradingContrast = v;
+        }
 
         private int id = -1;
         private IEffectApplier applier = null;

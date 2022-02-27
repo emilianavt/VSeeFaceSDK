@@ -19,6 +19,28 @@ namespace VSeeFace {
         public float dotDotSize = 1.75f;
         [Tooltip("If set to true, transparency will be copied from the input, otherwise dots will become opaque while the background becomes transparent.")]
         public bool dotPreserveAlpha = true;
+        
+        public void SetEnabled(bool v) {
+            enabledDot = v;
+        }
+        public void SetColor(Color v) {
+            dotColor = v;
+        }
+        public void SetThresholdLow(float v) {
+            dotThresholdLow = v;
+        }
+        public void SetThresholdHigh(float v) {
+            dotThresholdHigh = v;
+        }
+        public void SetAreaSize(float v) {
+            dotAreaSize = v;
+        }
+        public void SetDotSize(float v) {
+            dotDotSize = v;
+        }
+        public void SetPreserveAlpha(bool v) {
+            dotPreserveAlpha = v;
+        }
 
         private int id = -1;
         private IEffectApplier applier = null;

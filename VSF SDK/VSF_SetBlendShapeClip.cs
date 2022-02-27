@@ -13,6 +13,13 @@ namespace VSeeFace {
         [Tooltip("This is the value the VRM blend shape clip will be set to. This value can also be controlled through Unity animations.")]
         public float blendShapeClipValue = 1f;
         
+        public void SetName(string v) {
+            blendShapeClipName = v;
+        }
+        public void SetValue(float v) {
+            blendShapeClipValue = v;
+        }
+        
         private VRMBlendShapeProxy proxy = null;
         private BlendShapeKey blendShapeKey;
         private bool found = false;

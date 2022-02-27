@@ -18,6 +18,28 @@ namespace VSeeFace {
         public float grainLuminanceContribution = 0.8f;
         [Range(0.5f,16f)]
         public float grainAlpha = 4f;
+        
+        public void SetEnabled(bool v) {
+            enabledGrain = v;
+        }
+        public void SetFixAlpha(bool v) {
+            grainFixAlpha = v;
+        }
+        public void SetColored(bool v) {
+            grainColored = v;
+        }
+        public void SetIntensity(float v) {
+            grainIntensity = v;
+        }
+        public void SetSize(float v) {
+            grainSize = v;
+        }
+        public void SetLuminanceContribution(float v) {
+            grainLuminanceContribution = v;
+        }
+        public void SetAlpha(float v) {
+            grainAlpha = v;
+        }
 
         private int id = -1;
         private IEffectApplier applier = null;

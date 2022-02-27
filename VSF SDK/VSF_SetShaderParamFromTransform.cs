@@ -17,6 +17,19 @@ namespace VSeeFace {
 
         [Tooltip("This defines how the parameters are extracted. WorldToLocalMatrix and LocalToWorldMatrix are transformation matrices (float4x4) while the others are a vector type (float4).")]
         public VSF_SetShaderParamFromTransform_Mode mode;
+        
+        public void SetReferenceTransform(Transform v) {
+            referenceTransform = v;
+        }
+        public void SetTargetMaterial(Material v) {
+            targetMaterial = v;
+        }
+        public void SetShaderParameterName(string v) {
+            shaderParameterName = v;
+        }
+        public void SetMode(VSF_SetShaderParamFromTransform_Mode v) {
+            mode = v;
+        }
 
 
         public void Update() {
