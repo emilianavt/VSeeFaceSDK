@@ -302,3 +302,19 @@ renderer that is on the same object.
 * `uWindowCapture.UwcWindowTexture`
 * `uWindowCapture.UwcWindowTextureChildrenManager`
 * `uWindowCapture.UwcWindowTextureManager`
+
+## Integrating VSFAvatar support in other applications
+
+Integrating VSFAvatar support is not really supported and the format might change at any time, but if you'd still like to try supporting it, here are some notes. The first thing you'll want to do is include the VSF SDK in your application, so references to the `VSF_*` components can be resolved. Also make sure to include all the assets listed under "Supported additional assets" in the correct versions to ensure compatibility with existing VSFAvatar files. Verifying the whitelist using the `AvatarCheck` component when loading a model is recommended. DokoDemoPainter should be modified to remove persistence support to prevent VSFAvatar files from being able to write to arbitrary paths. Magica Cloth and Spout4Unity require their corresponding manager components to be added to the scene in order to be supported correctly.
+
+VSFAvatar files are Unity asset bundle files. You can take a look at the `BasicExporter` and `VSFAvatarInspector` scripts to see how the bundle is laid out. Using that information you should be able to load the file.
+
+Certain features and application will need additional support from your applications. Animations on the avatar are registered to VRM blend shape clips on the `VSF_Animations` component. These animations should be played with a weight corresponding to the VRM blend shape clip being set on the VRM blend shape proxy. Since VRM blend shape clip weights are transmitted over VMC protocol, implementing this will automatically make animations work correctly when receiving tracking data over VMC protocol. If an animator controller is set on a VSFAvatar, it was probably left there by accident and should be cleared. An application supporting VSFAvatar format has to implement its own animation handling. The preview function of the `VSF_Animations` component can serve as a simplified example for this, although it only supports playing back a single animation at full strength, rather than multiple blended animations.
+
+Cameras with the `VSF_MainCamera` component should become active instead of the regular scene camera when being activated. If multiple cameras with this component become active, they should be added and removed to a stack of cameras in the order in which they become active, with the latest activated camera on the stack being the current camera.
+
+Settings set on `VSF_Configuration` component should be handled as far as they are applicable by an application supporting VSFAvatar format.
+
+To support the `VSF_SetEffect*` components, the Unity Post Processing Stack v2 should be active and on every frame, settings from active `VSF_SetEffect*` components should be applied to the corresponding effects. When `VSF_SetEffect*` components become inactive, the effect settings should be reverted to their defaults.
+
+When a VSFAvatar file contains a `VideoPlayer` component, the asset bundle must not be unloaded while the avatar is active, otherwise the video will fail to play.
