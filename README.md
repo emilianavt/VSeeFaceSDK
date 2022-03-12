@@ -85,6 +85,14 @@ blending modes other than regular alpha blending will look
 different over transparent areas than they do while in front of
 the model.
 
+In other cases, where using a shader with transparency leads to
+objects becoming translucent in OBS in an incorrect manner,
+setting the alpha blending operation to "Max" often helps. For
+example, there is a setting for this in the "Rendering Options",
+"Blending" section of the Poiyomi shader. In the case of a custom
+shader, setting `BlendOp Add, Max` or similar, with the important
+part being the `Max` should help.
+
 When an avatar uses a VideoPlayer component with a video file,
 loading the same avatar into multiple slots of the avatar
 selection will cause errors, because the internal path of the
