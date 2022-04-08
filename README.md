@@ -1,7 +1,7 @@
 # VSeeFace SDK
 
 You need Unity 2019.4.31f1. Make a project and import
-the UniVRM (0.66 is known to work well, older versions may cause issues with MToon transparency), then import this SDK. Also make sure to
+the UniVRM 0.89, then import this SDK. Also make sure to
 set the project to [linear color space](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html).
 
 As an introduction, please watch [this tutorial video](https://youtu.be/jhQ8DF87I5I) by @[Virtual_Deat](twitter.com/Virtual_Deat).
