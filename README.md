@@ -1,7 +1,7 @@
 # VSeeFace SDK
 
 You need Unity 2019.4.31f1. Make a project and import
-the UniVRM (0.66 is known to work well, older versions may cause issues with MToon transparency), then import this SDK. Also make sure to
+the UniVRM 0.89, then import this SDK. Also make sure to
 set the project to [linear color space](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html).
 
 As an introduction, please watch [this tutorial video](https://youtu.be/jhQ8DF87I5I) by @[Virtual_Deat](twitter.com/Virtual_Deat).
@@ -84,6 +84,14 @@ alpha blending works, particles using additive or other
 blending modes other than regular alpha blending will look
 different over transparent areas than they do while in front of
 the model.
+
+In other cases, where using a shader with transparency leads to
+objects becoming translucent in OBS in an incorrect manner,
+setting the alpha blending operation to "Max" often helps. For
+example, there is a setting for this in the "Rendering Options",
+"Blending" section of the Poiyomi shader. In the case of a custom
+shader, setting `BlendOp Add, Max` or similar, with the important
+part being the `Max` should help.
 
 When an avatar uses a VideoPlayer component with a video file,
 loading the same avatar into multiple slots of the avatar
