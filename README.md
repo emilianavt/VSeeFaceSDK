@@ -103,9 +103,9 @@ includes a VideoPlayer and is currently in use will not reload
 the file.
 
 Supported additional assets are:
-- Dynamic Bones
+- Dynamic Bones (v1.3.2)
 - SPCRJointDynamics
-- Magica Cloth (v1.12.3)
+- Magica Cloth (v1.12.10)
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
 - DokoDemoPainter (needs to be moved outside the "Plugins" folder, no persistence supported)
