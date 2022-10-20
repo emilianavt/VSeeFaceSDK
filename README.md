@@ -292,6 +292,7 @@ renderer that is on the same object.
 * `VSeeFace.VSF_SetEffectLensDistortion`
 * `VSeeFace.VSF_SetShaderParamFromTransform`
 * `VSeeFace.VSF_SetTransform`
+* `VSeeFace.VSF_SpoutReceiverSettings`
 * `VSeeFace.VSF_Static`
 * `VSeeFace.VSF_Toggle`
 * `VSeeFace.VSF_Trigger`
