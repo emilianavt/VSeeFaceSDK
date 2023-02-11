@@ -234,6 +234,7 @@ renderer that is on the same object.
 * `SPCRJointDynamicsController`
 * `SPCRJointDynamicsPoint`
 * `SPCRJointDynamicsPointGrabber`
+* `Spout.InvertCamera`
 * `Spout.SpoutReceiver`
 * `Spout.SpoutSender`
 * `TMPro.TMP_Dropdown`

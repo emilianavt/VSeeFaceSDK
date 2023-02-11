@@ -106,6 +106,7 @@ namespace VSeeFace {
             "SPCRJointDynamicsController",
             "SPCRJointDynamicsPoint",
             "SPCRJointDynamicsPointGrabber",
+            "Spout.InvertCamera",
             "Spout.SpoutReceiver",
             "Spout.SpoutSender",
             "TMPro.TMP_Dropdown",
