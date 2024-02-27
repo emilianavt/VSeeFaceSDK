@@ -104,7 +104,7 @@ the file.
 
 Supported additional assets are:
 - Dynamic Bones (v1.3.2)
-- SPCRJointDynamics
+- SPCRJointDynamics ([v5.6.3](https://github.com/SPARK-inc/SPCRJointDynamics/archive/refs/heads/5.6.3.zip))
 - Magica Cloth (v1.12.10)
 - uWindowCapture (v0.6.0)
 - Obi Cloth (6.2)
