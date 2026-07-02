@@ -4,6 +4,8 @@ You need Unity 2019.4.31f1. Make a project and import
 [UniVRM 0.89](https://github.com/vrm-c/UniVRM/releases/tag/v0.89.0), then import this SDK. Also make sure to
 set the project to [linear color space](https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html).
 
+If you cannot use 2019.4.31f1, you can try any newer 2019.4 version. It might work.
+
 As an introduction, please watch [this tutorial video](https://youtu.be/jhQ8DF87I5I) by @[Virtual_Deat](twitter.com/Virtual_Deat).
 
 You can watch how the two included sample models were made [here](https://www.youtube.com/watch?v=T4LxyxfUAVY).
