@@ -1,4 +1,4 @@
-﻿// Adapted from TWSDK
+// Adapted from TWSDK
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
@@ -52,9 +52,11 @@ namespace VSeeFace
                     options = options | BuildAssetBundleOptions.UncompressedAssetBundle;
                 }
                 BuildPipeline.BuildAssetBundles(Application.temporaryCachePath, new AssetBundleBuild[] { bundleBuild }, options, BuildTarget.StandaloneWindows);
+                // Unity always lowercases the asset bundle name when writing it to disk, regardless of the case passed in above.
+                string builtPath = Application.temporaryCachePath + "/" + filename.ToLowerInvariant();
                 if (File.Exists(fullpath))
                     File.Delete(fullpath);
-                File.Move(Application.temporaryCachePath + "/" + filename, fullpath);
+                File.Move(builtPath, fullpath);
 
                 EditorUtility.DisplayDialog("Export", "Export complete!", "OK");
                 complete = true;
